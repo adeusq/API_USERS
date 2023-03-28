@@ -7,7 +7,7 @@ function UsersController() {
 
             const usuarios = await Users.findAll({ attributes: { exclude: ['createdAt', 'updatedAt'] } })
 
-            return res.json(usuarios)
+            return res.render('usuarios/pages', { usuarios })
         
         },
 
