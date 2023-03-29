@@ -8,24 +8,25 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-
+          <form action="/usuarios/salvar" method="POST">
           <label>Nome:</label>
-          <input type="text" class="form-control"> <br>
+          <input type="text" class="form-control" name="name" required><br>
 
-          <label>Idade:</label>
-          <input type="number" class="form-control"> <br>
+          <label>Data de nascimento:</label>
+          <input type="date" class="form-control" name="birthdate" required> <br>
 
           <label>Email:</label>
-          <input type="text" class="form-control"> <br>
+          <input type="text" class="form-control" name="email" required> <br>
 
           <label>É administrador?</label> <br>
-          <input type="radio" name="admin" required> <span>Sim</span> <br>
-          <input type="radio" name="admin"> <span>Não</span>
+          <input type="radio" name="isAdmin" value="1" required> <span>Sim</span> <br>
+          <input type="radio" name="isAdmin" value="0"> <span>Não</span>
 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-          <button type="button" class="btn btn-primary">Cadastrar</button>
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
         </div>
       </div>
     </div>

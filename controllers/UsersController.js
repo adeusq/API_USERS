@@ -1,3 +1,5 @@
+const moment = require('moment')
+moment.locale('pt-br')
 const { Users } = require('../models/index')
 
 function UsersController() {
@@ -17,25 +19,22 @@ function UsersController() {
 
             const usuario = await Users.findOne({ where: { id }, attributes: { exclude: ['createdAt', 'updatedAt'] } })
 
-            return res.json(usuario)
+            return res.render('usuarios/pages/dadosUsuario', { usuario, moment })
         }, 
 
         async saveNewUser(req, res) {
 
-            const { name, age, email, isAdmin } = req.body
+            const { name, birthdate, email, isAdmin } = req.body
 
 
             const [ user, created ] = await Users.findOrCreate({
                 where: { email },
-                defaults: { name, age, email, isAdmin }
+                defaults: { name, birthdate, email, isAdmin }
             })
 
-            if(!created) return res.status(202).json({ status: 202, message: "O usuário já existe na base de dados!" }) 
+            if(!created) return res.redirect('/usuarios')
 
-            return res.status(201).json({
-                message: "Usuário criado com sucesso!", 
-                data: user
-            })
+            return res.redirect('/usuarios')
 
         },
 
@@ -65,9 +64,9 @@ function UsersController() {
 
         async updateUser(req, res) {
 
-            const { id, name, age, email, isAdmin } = req.body
+            const { id, name, birthdate, email, isAdmin } = req.body
 
-            await Users.update({ name, age, email, isAdmin }, { where: { id }})
+            await Users.update({ name, birthdate, email, isAdmin }, { where: { id }})
 
             return res.status(200).json({
                 status: 200,
