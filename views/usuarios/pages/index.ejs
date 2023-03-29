@@ -1,6 +1,6 @@
 <div class="container">
     <div class="card">
-        <div class="card-header">Lista de Usuários</div>
+        <div class="card-header"><h1 class="text-center">Lista de Usuários</h1></div>
         <div class="card-body">
             <table class="table table-bordered table-striped">
                 <thead>
@@ -16,10 +16,15 @@
                             <td><%= usuario.name %></td>
                             <td><%= usuario.age %></td>
                             <td><%= usuario.email %></td>
-                            <td><%= usuario.isAdmin %></td> <!-- O TERNÁRIO VAI SER USADO AQUI DENTRO DA TD -->
+                            <td><%= usuario.isAdmin == 1 ? 'Sim' : 'Não' %></td>
                             <td>
-                                <button class="btn btn-warning" ><i class="fa-solid fa-pen-to-square"></i></button>
-                                <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                                <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editarUsuario">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+
+                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#excluirUsuario">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
                             </td>
                         </tr>
                     <% }) %>
@@ -27,13 +32,14 @@
 
 
             </table>
-            <button class="btn btn-primary">Cadastrar</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cadastrarUsuario">Cadastrar</button>
         </div>
 
     </div>
 </div>
 
-<% /* %>
 
-<% include('../partials/editar')%>
-<% */ %>
+<%- include('../partials/cadastrarUsuario')%>
+<%- include('../partials/editarUsuario')%>
+<%- include('../partials/excluirUsuario')%>
+
