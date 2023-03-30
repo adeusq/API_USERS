@@ -1,8 +1,8 @@
-const Users = require('../routes/Users')
+const Donors = require('../routes/Donors')
 const Home = require('../routes/Home')
 
 function initializeRoutes(app) {
-    app.use('/usuarios', Users)
+    app.use('/doadores', Donors)
     app.use('/home', Home)
 }
 

@@ -1,0 +1,54 @@
+<!-- Modal de cadastrar doador -->
+
+<div class="modal fade" id="cadastrarDoador" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cadastrar doador raro</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="/doadores/salvar" method="POST">
+          <label>PF:</label>
+          <input type="text" class="form-control" name="pf" required><br>
+
+          <label>Nome Completo:</label>
+          <input type="text" class="form-control" name="name" required><br>
+
+          <label>Data de nascimento:</label>
+          <input type="date" class="form-control" name="birthdate" required> <br>
+
+          <label>Nome da Mãe:</label>
+          <input type="text" class="form-control" name="nameMother" required><br>
+
+          <label>Tipagem ABO:</label>
+          <input type="text" class="form-control" name="tipagemABO" required> <br>
+
+          <label>Tipagem RhD:</label>
+          <input type="text" class="form-control" name="tipagemRh" required> <br>
+
+          <label>Pesquisa de Anticorpo Irregular (PAI):</label>
+          <input type="text" class="form-control" name="pai" required> <br>
+
+          <label>Fenotipagem Rh e K:</label>
+          <input type="text" class="form-control" name="fenotipagemRhK" required> <br>
+
+          <label>Fenotipagem Estendida:</label>
+          <input type="text" class="form-control" name="fenotipagemEstendida" required> <br>
+
+          <label>É genotipado?</label> <br>
+          <input type="radio" name="genotipagem" value="1" required> <span>Sim</span>
+          <input type="radio" name="genotipagem" value="0"> <span>Não</span> <br><br>
+
+          <label>Observação:</label>
+          <input type="text" class="form-control" name="observacao" required> <br>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Users', {
+    await queryInterface.createTable('Donors', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -15,11 +15,32 @@ module.exports = {
       birthdate: {
         type: Sequelize.DATEONLY
       },
-      email: {
+      pf: {
         type: Sequelize.STRING
       },
-      isAdmin: {
-        type: Sequelize.BOOLEAN
+      nameMother: {
+        type: Sequelize.STRING
+      },
+      tipagemABO: {
+        type: Sequelize.STRING
+      },
+      tipagemRh: {
+        type: Sequelize.STRING
+      },
+      pai: {
+        type: Sequelize.STRING
+      },
+      fenotipagemRhK: {
+        type: Sequelize.STRING
+      },
+      fenotipagemEstendida: {
+        type: Sequelize.STRING
+      },
+      genotipagem: {
+        type: Sequelize.STRING
+      },
+      observacao: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
@@ -32,6 +53,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Users');
+    await queryInterface.dropTable('Donors');
   }
 };

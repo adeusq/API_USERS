@@ -1,0 +1,55 @@
+<div class="container">
+    <a class="btn btn-secondary" href="/doadores"><i class="fa-solid fa-arrow-left"></i></a>
+    <div class="card">
+        <div class="card-header">
+            <h1 class="text-center">Dados do Doador Raro </h1>
+        </div>  
+        <div class="card-body">
+
+            <div class="row">
+
+                <div class="col-md-12">
+                    <h2>Pessoa Física: <strong><%= doador.pf %></strong></h2>
+             
+                <div class="col-md-12">
+                    <h2>Nome Completo: <strong><%= doador.name %></strong></h2>
+
+                <div class="col-md-12">
+                    <h2>Data de Nascimento: <strong><%= moment(doador.birthdate).format('L')%></strong></h2>  
+
+                <div class="col-md-12">
+                    <h2>Nome da Mãe: <strong><%= doador.nameMother %></strong></h2>  
+            </div>
+<br>
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center"> <u>Testes Imuno-hematológicos</u></h2>
+            <div class="card-body">
+
+            <div class="row">
+               <div class="col-md-12">
+                    <h2>Tipagem ABO: <strong><%= doador.tipagemABO %></strong></h2>  
+
+                <div class="col-md-12">
+                    <h2>Tipagem RhD: <strong><%= doador.tipagemRh %></strong></h2>  
+
+                <div class="col-md-12">
+                    <h2>Pesquisa de Anticorpo Irregular (PAI):<strong><%= doador.pai %></strong></h2>  
+
+                <div class="col-md-12">
+                    <h2>Fenotipagem Rh e K: <strong><%= doador.fenotipagemRhK %></strong></h2>  
+
+                <div class="col-md-12">
+                    <h2>Fenotipagem Estendida: <strong><%= doador.fenotipagemEstendida %></strong></h2>  
+
+                    <div class="col-md-12">
+                        <h2>É genotipado? <strong><%= doador.genotipagem == 1 ? 'Sim' : 'Não' %></strong></h2>  
+
+                <div class="col-md-12">
+                    <h2>Observação: <strong><%= doador.observacao %></strong></h2> 
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>

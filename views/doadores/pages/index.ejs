@@ -1,0 +1,50 @@
+<div class="container mt-3">
+    <div class="card">
+        <div class="card-header"><h1 class="text-center">Lista de Doadores Raros</h1></div>
+        <div class="card-body">
+            <table class="table table-bordered">
+                <thead class="text-center">
+                    <th class="col-md-2">Pessoa Física</th>
+                    <th class="col-md-3">Nome Completo</th>
+                    <th class="col-md-2">Data de Nascimento</th>
+                    <th class="col-md-3">Nome da Mãe</th>
+                    <th class="col-md-2">Registro do Doador Raro</th>
+
+                </thead>
+                <tbody>
+                    <% doadores.forEach(doador => { %>
+                        <tr class="text-center">
+                            <td><%= doador.pf %></td>
+                            <td><%= doador.name %></td>
+                            <td><%= moment(doador.birthdate).format('L')%></td>
+                            <td><%= doador.nameMother %></td>
+                            <td>
+                                <a class="btn btn-info" href="/doadores/<%= doador.pf %>">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+
+                                <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editarUsuario">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+
+                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#excluirUsuario">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+
+
+            </table>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cadastrarDoador">Cadastrar</button>
+        </div>
+
+    </div>
+</div>
+
+
+<%- include('../partials/cadastrarDoador')%>
+<%- include('../partials/editarUsuario')%>
+<%- include('../partials/excluirUsuario')%>
+
