@@ -1,24 +1,27 @@
+<link rel="stylesheet" href="/css/doador.css">
+
 <div class="container">
+
     <a class="btn btn-secondary" href="/doadores"><i class="fa-solid fa-arrow-left"></i></a>
     
     <div class="card">
-        <div class="card-header">
-            <h1 class="text-center">Dados do Doador Raro </h1>
+        <div class="card-header bg-green text-light">
+            <h2 class="text-center"><i class="fas fa-hand-holding-water fa-sm"></i> Dados do Doador Raro </h2>
         </div>  
-        <div class="card-body">
+        <div class="card-body bg-gray">
 
             <div class="row">
                 <div>
-                    <h2>Pessoa Física: <strong><%= doador.pf %></strong></h2>
+                    <h3>Pessoa Física: <strong><%= doador.pf %></strong></h3>
                 </div>    
                 <div>
-                    <h2>Nome Completo: <strong><%= doador.name %></strong></h2>
+                    <h3>Nome Completo: <strong><%= doador.name %></strong></h3>
                 </div>        
                 <div>
-                    <h2>Data de Nascimento: <strong><%= moment(doador.birthdate).format('L')%></strong></h2>  
+                    <h3>Data de Nascimento: <strong><%= moment(doador.birthdate).format('L')%></strong></h3>  
                 </div>
                 <div>
-                    <h2>Nome da Mãe: <strong><%= doador.nameMother %></strong></h2>  
+                    <h3>Nome da Mãe: <strong><%= doador.nameMother %></strong></h3>  
                 </div>                    
             </div>
         </div>
@@ -26,65 +29,65 @@
 
     <div class="card">
 
-        <div class="card-header">
-            <h2 class="text-center"> <u>Contatos</u></h2>
+        <div class="card-header bg-green text-light">
+            <h2 class="text-center"><i class="fas fa-mobile-alt fa-sm"></i> Contatos</h2>
         </div> 
 
-        <div class="card-body">
+        <div class="card-body bg-gray col-md-12">
             <div class="row">
                 <div>
-                    <h2>Telefone: <strong><%= doador.contact %></strong></h2>  
+                    <h3>Telefone: <strong><%= doador.contact %></strong></h3>  
                 </div>    
                 <div>
-                    <h2>Email: <strong><%= doador.email %></strong></h2> 
+                    <h3>Email: <strong><%= doador.email %></strong></h3> 
                 </div>    
             </div>
         </div>
     </div> <br>
 
     <div class="card">
-        <div class="card-header">
-                <h2 class="text-center"> <u>Testes Imuno-hematológicos</u></h2>
+        <div class="card-header bg-green text-light">
+                <h2 class="text-center"><i class="fas fa-vial fa-sm"></i> Testes Imuno-hematológicos</h2>
         </div>    
 
-        <div class="card-body">
+        <div class="card-body bg-gray">
 
             <div class="row">
                 
                 <div>
-                    <h2>Tipagem ABO: <strong><%= doador.tipagemABO %></strong></h2>  
+                    <h3>Tipagem ABO: <strong><%= doador.tipagemABO %></strong></h3>  
                 </div>
 
                 <div>
-                    <h2>Tipagem RhD: <strong><%= doador.tipagemRh %></strong></h2>  
+                    <h3>Tipagem RhD: <strong><%= doador.tipagemRh %></strong></h3>  
                 </div>
 
                 <div>
-                    <h2>Pesquisa de Anticorpo Irregular (PAI): <strong><%= doador.pai %></strong></h2>  
+                    <h3>Pesquisa de Anticorpo Irregular (PAI): <strong><%= doador.pai %></strong></h3>  
                 </div>  
 
                 <div>
-                    <h2>Identificação de Anticorpo Irregular (IAI): <strong> <%= doador.pai == 'Positivo' ? doador.iai : '-' %></strong></h2>      
+                    <h3>Identificação de Anticorpo Irregular (IAI): <strong> <%= doador.pai == 'Positivo' ? doador.iai : '-' %></strong></h3>      
                 </div>
 
                 <div>
-                    <h2>Fenotipagem Rh e K: <strong><%= doador.fenotipagemRhK %></strong></h2>  
+                    <h3>Fenotipagem Rh e K: <strong><%= doador.fenotipagemRhK %></strong></h3>  
                 </div>
 
                 <div>
-                    <h2>Fenótipo Raro: <strong><%= doador.fenotipoRaro %></strong></h2>       
+                    <h3>Fenótipo Raro: <strong><%= doador.fenotipoRaro %></strong></h3>       
                 </div>    
 
                 <div>
-                    <h2>Fenotipagem Estendida: <strong><%= doador.fenotipagemEstendida %></strong></h2>  
+                    <h3>Fenotipagem Estendida: <strong><%= doador.fenotipagemEstendida %></strong></h3>  
                 </div>    
 
                 <div>
-                    <h2>É genotipado? <strong><%= doador.genotipagem == 1 ? 'Sim' : 'Não' %></strong></h2>  
+                    <h3>É genotipado? <strong><%= doador.genotipagem == 1 ? 'Sim' : 'Não' %></strong></h3>  
                 </div>    
 
                 <div>
-                    <h2>Observação: <strong><%= doador.observacao %></strong></h2> 
+                    <h3>Observação: <strong><%= doador.observacao %></strong></h3> 
                 </div>    
             </div>
         </div>
