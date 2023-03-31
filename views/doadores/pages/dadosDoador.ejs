@@ -20,7 +20,26 @@
                 <div class="col-md-12">
                     <h2>Nome da Mãe: <strong><%= doador.nameMother %></strong></h2>  
             </div>
-<br>
+        </div>
+
+            <br>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center"> <u>Contatos</u></h2>
+            <div class="card-body">
+
+            <div class="row">
+            <div class="col-md-12">
+                    <h2>Telefone: <strong><%= doador.contact %></strong></h2>  
+
+                <div class="col-md-12">
+                    <h2>Email: <strong><%= doador.email %></strong></h2> 
+            </div>
+        </div>
+
+            <br>
+
             <div class="card">
                 <div class="card-header">
                     <h2 class="text-center"> <u>Testes Imuno-hematológicos</u></h2>
@@ -34,16 +53,22 @@
                     <h2>Tipagem RhD: <strong><%= doador.tipagemRh %></strong></h2>  
 
                 <div class="col-md-12">
-                    <h2>Pesquisa de Anticorpo Irregular (PAI):<strong><%= doador.pai %></strong></h2>  
+                    <h2>Pesquisa de Anticorpo Irregular (PAI): <strong><%= doador.pai %></strong></h2>  
+
+                <div class="col-md-12">
+                    <h2>Identificação de Anticorpo Irregular (IAI): <strong> <%= doador.pai == 'Positivo' ? doador.iai : '-' %></strong></h2>      
 
                 <div class="col-md-12">
                     <h2>Fenotipagem Rh e K: <strong><%= doador.fenotipagemRhK %></strong></h2>  
 
                 <div class="col-md-12">
+                    <h2>Fenótipo Raro: <strong><%= doador.fenotipoRaro %></strong></h2>       
+
+                <div class="col-md-12">
                     <h2>Fenotipagem Estendida: <strong><%= doador.fenotipagemEstendida %></strong></h2>  
 
-                    <div class="col-md-12">
-                        <h2>É genotipado? <strong><%= doador.genotipagem == 1 ? 'Sim' : 'Não' %></strong></h2>  
+                <div class="col-md-12">
+                    <h2>É genotipado? <strong><%= doador.genotipagem == 1 ? 'Sim' : 'Não' %></strong></h2>  
 
                 <div class="col-md-12">
                     <h2>Observação: <strong><%= doador.observacao %></strong></h2> 

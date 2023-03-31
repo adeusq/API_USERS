@@ -9,16 +9,22 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      pf: {
+        type: Sequelize.STRING
+      },
       name: {
         type: Sequelize.STRING
       },
       birthdate: {
         type: Sequelize.DATEONLY
       },
-      pf: {
+      nameMother: {
         type: Sequelize.STRING
       },
-      nameMother: {
+      contact: {
+        type: Sequelize.STRING
+      },
+      email: {
         type: Sequelize.STRING
       },
       tipagemABO: {
@@ -30,7 +36,13 @@ module.exports = {
       pai: {
         type: Sequelize.STRING
       },
+      iai: {
+        type: Sequelize.STRING
+      },
       fenotipagemRhK: {
+        type: Sequelize.STRING
+      },
+      fenotipoRaro: {
         type: Sequelize.STRING
       },
       fenotipagemEstendida: {

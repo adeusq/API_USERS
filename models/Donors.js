@@ -14,14 +14,18 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Donors.init({
+    pf: DataTypes.STRING,
     name: DataTypes.STRING,
     birthdate: DataTypes.DATEONLY,
-    pf: DataTypes.STRING,
     nameMother: DataTypes.STRING,
+    contact: DataTypes.STRING,
+    email: DataTypes.STRING,
     tipagemABO: DataTypes.STRING,
     tipagemRh: DataTypes.STRING,
     pai: DataTypes.STRING,
+    iai: DataTypes.STRING,
     fenotipagemRhK: DataTypes.STRING,
+    fenotipoRaro: DataTypes.STRING,
     fenotipagemEstendida: DataTypes.STRING,
     genotipagem: DataTypes.BOOLEAN,
     observacao: DataTypes.STRING

@@ -25,12 +25,12 @@ function DonorsController() {
 
         async saveNewDonor(req, res) {
 
-            const { name, birthdate, pf, nameMother, tipagemABO, tipagemRh, pai, fenotipagemRhK, fenotipagemEstendida, genotipagem, observacao } = req.body
+            const { pf, name, birthdate, nameMother, contact, email, tipagemABO, tipagemRh, pai, iai, fenotipagemRhK, fenotipoRaro, fenotipagemEstendida, genotipagem, observacao } = req.body
 
 
             const [ donor, created ] = await Donors.findOrCreate({
                 where: { pf },
-                defaults: { name, birthdate, pf, nameMother, tipagemABO, tipagemRh, pai, fenotipagemRhK, fenotipagemEstendida, genotipagem, observacao }
+                defaults: { pf, name, birthdate, nameMother, contact, email, tipagemABO, tipagemRh, pai, iai, fenotipagemRhK, fenotipoRaro, fenotipagemEstendida, genotipagem, observacao }
             })
 
             if(!created) return res.redirect('/doadores')

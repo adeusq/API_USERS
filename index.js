@@ -19,7 +19,7 @@ Router(app)
 
 connection
     .authenticate()
-    .then(() => console.log('Conectado com banco de dados.'))
+    .then(() => console.log('Connected with the database!'))
     .catch(err => console.log(err))
 
-app.listen(3000, () => console.log('Servidor rodando na porta 3000')) 
+app.listen(3000, () => console.log('Server running on port 3000!')) 
